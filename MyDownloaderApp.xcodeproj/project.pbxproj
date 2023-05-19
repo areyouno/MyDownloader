@@ -14,6 +14,10 @@
 		8208EA992A0BE9240047B20B /* MyDownloaderAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8208EA982A0BE9240047B20B /* MyDownloaderAppTests.swift */; };
 		8208EAA32A0BE9250047B20B /* MyDownloaderAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8208EAA22A0BE9250047B20B /* MyDownloaderAppUITests.swift */; };
 		8208EAA52A0BE9250047B20B /* MyDownloaderAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8208EAA42A0BE9250047B20B /* MyDownloaderAppUITestsLaunchTests.swift */; };
+		825E7DB12A0BEE03003FB992 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825E7DB02A0BEE03003FB992 /* ContentView-ViewModel.swift */; };
+		82B40F962A13807B00BA1F30 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B40F952A13807B00BA1F30 /* Toast.swift */; };
+		82B40F982A1380AB00BA1F30 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B40F972A1380AB00BA1F30 /* ToastView.swift */; };
+		82E4E4EE2A167A1800F3EEA7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E4E4ED2A167A1800F3EEA7 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,12 @@
 		8208EA9E2A0BE9250047B20B /* MyDownloaderAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDownloaderAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8208EAA22A0BE9250047B20B /* MyDownloaderAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDownloaderAppUITests.swift; sourceTree = "<group>"; };
 		8208EAA42A0BE9250047B20B /* MyDownloaderAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDownloaderAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		825E7DB02A0BEE03003FB992 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
+		82B40F952A13807B00BA1F30 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		82B40F972A1380AB00BA1F30 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		82BAA8AF2A126F9900499686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		82E2FFDF2A1334B100BF078B /* MyDownloaderApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyDownloaderApp.entitlements; sourceTree = "<group>"; };
+		82E4E4ED2A167A1800F3EEA7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +104,14 @@
 		8208EA862A0BE9230047B20B /* MyDownloaderApp */ = {
 			isa = PBXGroup;
 			children = (
+				82E2FFDF2A1334B100BF078B /* MyDownloaderApp.entitlements */,
+				82BAA8AF2A126F9900499686 /* Info.plist */,
 				8208EA872A0BE9230047B20B /* MyDownloaderAppApp.swift */,
 				8208EA892A0BE9230047B20B /* ContentView.swift */,
+				825E7DB02A0BEE03003FB992 /* ContentView-ViewModel.swift */,
+				82E4E4ED2A167A1800F3EEA7 /* Constants.swift */,
+				82B40F972A1380AB00BA1F30 /* ToastView.swift */,
+				82B40F952A13807B00BA1F30 /* Toast.swift */,
 				8208EA8B2A0BE9240047B20B /* Assets.xcassets */,
 				8208EA8D2A0BE9240047B20B /* Preview Content */,
 			);
@@ -257,8 +273,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82B40F982A1380AB00BA1F30 /* ToastView.swift in Sources */,
+				82B40F962A13807B00BA1F30 /* Toast.swift in Sources */,
 				8208EA8A2A0BE9230047B20B /* ContentView.swift in Sources */,
+				825E7DB12A0BEE03003FB992 /* ContentView-ViewModel.swift in Sources */,
 				8208EA882A0BE9230047B20B /* MyDownloaderAppApp.swift in Sources */,
+				82E4E4EE2A167A1800F3EEA7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,12 +434,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyDownloaderApp/MyDownloaderApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyDownloaderApp/Preview Content\"";
 				DEVELOPMENT_TEAM = AVHHK89UZG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyDownloaderApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -443,12 +468,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyDownloaderApp/MyDownloaderApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyDownloaderApp/Preview Content\"";
 				DEVELOPMENT_TEAM = AVHHK89UZG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyDownloaderApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
