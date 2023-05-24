@@ -27,29 +27,6 @@ struct ContentView: View {
            
            ProgressView("", value: viewModel.progressDownload, total: 100)
               .padding(.bottom, 20)
-           
-           HStack {
-              Button {
-                 if viewModel.isDownload && !viewModel.isPaused {
-                    viewModel.pauseDownload()
-                 } else {
-                    viewModel.resumeDownload()
-                 }
-              } label: {
-                 Text(viewModel.isPaused ? "Resume" : "Pause")
-                    .fontWeight(.medium)
-              }
-              .padding(.trailing, 50)
-              .disabled(!viewModel.isDownload || !viewModel.isConnected)
-              
-              Button {
-                 viewModel.stopDownload()
-              } label: {
-                 Text("Stop")
-                    .fontWeight(.medium)
-              }
-              .disabled(!viewModel.isDownload)
-           }
         }
         .padding()
         .onAppear() {
